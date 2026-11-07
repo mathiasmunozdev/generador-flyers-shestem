@@ -1,0 +1,83 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "@fontsource/poppins/400.css";
+@import "@fontsource/poppins/500.css";
+@import "@fontsource/poppins/600.css";
+@import "@fontsource/poppins/700.css";
+@import "@fontsource/poppins/800.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Paleta SheSTEM, tomada del arte oficial:
+   morado #7c0092 · morado profundo #680179 · lila #f9ecfc */
+:root {
+  --radius: 0.875rem;
+  --background: #fcf8fd;
+  --foreground: #2a0833;
+  --card: #ffffff;
+  --card-foreground: #2a0833;
+  --popover: #ffffff;
+  --popover-foreground: #2a0833;
+  --primary: #7c0092;
+  --primary-foreground: #ffffff;
+  --secondary: #f3e3f8;
+  --secondary-foreground: #5c0070;
+  --muted: #f6edf8;
+  --muted-foreground: #6e5a75;
+  --accent: #f9ecfc;
+  --accent-foreground: #5c0070;
+  --destructive: #c4183c;
+  --border: #ead6f0;
+  --input: #dcc3e4;
+  --ring: #a23cc0;
+  --brand: #7c0092;
+  --brand-deep: #680179;
+  --brand-lilac: #f9ecfc;
+}
+
+@theme inline {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-lilac: var(--brand-lilac);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+.brand-gradient {
+  background:
+    radial-gradient(120% 90% at 0% 0%, #8f00b5 0%, transparent 60%),
+    linear-gradient(135deg, #87009f 0%, #7c0092 45%, #680179 100%);
+}
